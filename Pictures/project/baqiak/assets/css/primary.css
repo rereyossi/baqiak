@@ -571,6 +571,11 @@ ul li {
 .tabs-main .active-content {
   display: block;
 }
+@media only screen and (max-width: 480px) {
+  .product-list .img {
+    height: 400px !important;
+  }
+}
 .box {
   border: 1px solid #dddddd;
   min-height: 100px;
@@ -719,6 +724,11 @@ ul li {
 .product-list .img {
   height: 170px;
   background-color: #c4c4c4;
+}
+@media only screen and (max-width: 380px) {
+  .product-list .img {
+    height: 400px;
+  }
 }
 .product-list img {
   -webkit-transition: 0.5s linear;

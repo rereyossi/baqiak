@@ -1,4 +1,5 @@
 @import url('main.less');
+@import url('mobile.less');
 
 .box{
 	border: 1px solid @color-line-primary;
@@ -171,6 +172,9 @@
 	.img{
 		height: 170px;
 		background-color: darken(@color-line-primary, 10%);
+		@media only screen and (max-width: 380px) {
+			height: 400px;
+		}
 	}
 	img{
 		-webkit-transition: 0.5s linear;

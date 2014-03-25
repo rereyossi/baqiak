@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="assets/slimmenu/slimmenu.min.css">
     <script src="assets/slimmenu/jquery.slimmenu.min.js"></script>
 
+    <!-- jquery modal box -->
+    <script src="assets/modalbox/jquery.custombox.js"></script>
+    <link rel="stylesheet" href="assets/modalbox/jquery.custombox.css">
+
+
 </head>
 
 <body>
@@ -73,6 +78,27 @@
             </div>
         </div>
     </header>
+
+    <!-- modal -->
+    <div class="modal">
+        <div class="container">
+            <a href="#modal" id="demo">Click Me</a>
+            <div id="modal" style="display: none;">
+                <div>
+                    <button type="button" class="close" onclick="$.fn.custombox('close');">&times;</button>
+                    <h4>Title</h4>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- nav main -->
     <!-- nav main for menu category -->
@@ -362,6 +388,17 @@
             easingEffect: null,
             indentChildren: false,
             childrenIndenter: '&nbsp;'
+        });
+    });
+    </script>
+
+    <script>
+    $(function() {
+        $('#demo').on('click', function() {
+            $.fn.custombox(this {
+                effect: 'fadein'
+            });
+            return false;
         });
     });
     </script>
